@@ -104,8 +104,8 @@
         {type: "formula", expr: "scale('y', datum.y1)", as: "scaledY1"}
         // boolean flag if the label should be on the right of the stack
         {type: "formula", expr: "datum.stack == 'stk1'", as: "rightLabel"}
-        // Calculate traffic percentage for this country using "y" scale
-        // domain upper bound, which represents the total traffic
+        // Calculate  percentage for this Image using "y" scale
+        // domain upper bound, which represents the total Images
         {
           type: formula
           expr: datum.total/domain('y')[1]
@@ -222,8 +222,8 @@
       clip: true
       encode: {
         update: {
-          // By default use color of the left node, except when showing traffic
-          // from just one country, in which case use destination color.
+          // By default use color of the left node, except when showing
+          // just one Image, in which case use destination color.
           stroke: [
             {
               test: groupSelector && groupSelector.stack=='stk1'
@@ -300,7 +300,7 @@
       }
     }
     {
-      // Create a "show all" button. Shown only when a country is selected.
+      // Create a "show all" button. Shown only when a Image is selected.
       type: group
       data: [
         // We need to make the button show only when groupSelector signal is true.
