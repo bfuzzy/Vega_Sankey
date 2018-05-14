@@ -45,7 +45,7 @@
       name: nodes
       source: rawData
       transform: [
-        // when a country is selected, filter out unrelated data
+        // when an Image is selected, filter out unrelated data
         {
           type: filter
           expr: !groupSelector || groupSelector.stk1 == datum.stk1 || groupSelector.stk2 == datum.stk2
@@ -54,7 +54,7 @@
         {type: "formula", expr: "datum.stk1+datum.stk2", as: "key"}
         // instead of each table row, create two new rows,
         // one for the source (stack=stk1) and one for destination node (stack=stk2).
-        // The country code stored in stk1 and stk2 fields is placed into grpId field.
+        // The Image stored in stk1 and stk2 fields is placed into grpId field.
         {
           type: fold
           fields: ["stk1", "stk2"]
